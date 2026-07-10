@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initBackToTop();
   initWhatsAppTooltip();
+  initDropdowns();
 });
 
 /* ============================================
@@ -337,4 +338,28 @@ function initWhatsAppTooltip() {
       whatsappBtn.classList.remove('show-tooltip');
     }, 6000);
   }, 2500);
+}
+
+/* ============================================
+   Engineers Portfolio Dropdown
+   ============================================ */
+function initDropdowns() {
+  const dropdown = document.querySelector('.dropdown');
+  const trigger = document.querySelector('.dropdown__trigger');
+  
+  if (!dropdown || !trigger) return;
+
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = dropdown.classList.contains('show-menu');
+    dropdown.classList.toggle('show-menu', !isOpen);
+    trigger.setAttribute('aria-expanded', !isOpen);
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('show-menu');
+    trigger.setAttribute('aria-expanded', 'false');
+  });
 }
