@@ -1371,36 +1371,36 @@
 }
 
 /* ============================================
-   WhatsApp Floating Button
+   Portfolio Floating Button
    ============================================ */
-.whatsapp-float {
+.portfolio-float {
   position: fixed;
   bottom: var(--space-8);
   right: var(--space-8);
   width: 56px;
   height: 56px;
-  background: #25D366;
+  background: var(--gradient-primary);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 28px;
+  font-size: 26px;
   z-index: 999;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.whatsapp-float:hover {
+.portfolio-float:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 6px 30px rgba(99, 102, 241, 0.6);
   color: #fff;
 }
 
-/* WhatsApp Tooltip Bubble styling */
-.whatsapp-float__tooltip {
+/* Portfolio Tooltip Bubble styling */
+.portfolio-float__tooltip {
   position: absolute;
   right: calc(100% + 12px);
   top: 50%;
@@ -1422,7 +1422,7 @@
 }
 
 /* Tooltip arrow pointer */
-.whatsapp-float__tooltip::after {
+.portfolio-float__tooltip::after {
   content: '';
   position: absolute;
   left: 100%;
@@ -1434,8 +1434,8 @@
 }
 
 /* Show tooltip states */
-.whatsapp-float:hover .whatsapp-float__tooltip,
-.whatsapp-float.show-tooltip .whatsapp-float__tooltip {
+.portfolio-float:hover .portfolio-float__tooltip,
+.portfolio-float.show-tooltip .portfolio-float__tooltip {
   opacity: 1;
   visibility: visible;
   transform: translateY(-50%) translateX(0) scale(1);
