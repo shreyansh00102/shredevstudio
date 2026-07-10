@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialsCarousel();
   initFaqAccordion();
   initBackToTop();
-  initPortfolioTooltip();
+  initWhatsAppTooltip();
 });
 
 /* ============================================
@@ -322,19 +322,19 @@ function initBackToTop() {
 }
 
 /* ============================================
-   Portfolio Tooltip Auto-Show Animation
+   WhatsApp Tooltip Auto-Show Animation
    ============================================ */
-function initPortfolioTooltip() {
-  const portfolioBtn = document.querySelector('.portfolio-float');
-  if (!portfolioBtn) return;
+function initWhatsAppTooltip() {
+  const whatsappBtn = document.querySelector('.whatsapp-float');
+  if (!whatsappBtn) return;
 
   // Show tooltip after 2.5 seconds to catch attention
   setTimeout(() => {
-    portfolioBtn.classList.add('show-tooltip');
+    whatsappBtn.classList.add('show-tooltip');
     
     // Auto-hide tooltip after 6 seconds
     setTimeout(() => {
-      portfolioBtn.classList.remove('show-tooltip');
+      whatsappBtn.classList.remove('show-tooltip');
     }, 6000);
   }, 2500);
 }

@@ -361,18 +361,18 @@
 }
 
 /* ============================================
-   Portfolio Floating Button Animation
+   WhatsApp Floating Button Animation
    ============================================ */
-.portfolio-float {
+.whatsapp-float {
   animation: pulse 2s ease-in-out infinite;
 }
 
-.portfolio-float::after {
+.whatsapp-float::after {
   content: '';
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 2px solid rgba(99, 102, 241, 0.5);
+  border: 2px solid rgba(37, 211, 102, 0.5);
   animation: ripple 2s ease-out infinite;
 }
 
