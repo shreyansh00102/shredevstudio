@@ -278,19 +278,42 @@ function initFaqAccordion() {
 }
 
 /* ============================================
-   Back to Top Button
+   Back to Top Button (with Scroll Progress)
    ============================================ */
 function initBackToTop() {
   const btn = document.querySelector('.back-to-top');
-  if (!btn) return;
+  const circle = document.getElementById('scroll-progress-circle');
+  if (!btn || !circle) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+
+  // Initialize progress stroke arrays
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    
+    // Set circle progress stroke-dashoffset
+    const offset = circumference - (scrollPercent / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+
+    // Toggle button visibility
+    if (scrollTop > 300) {
       btn.classList.add('visible');
     } else {
       btn.classList.remove('visible');
     }
-  });
+  }
+
+  // Update on scroll
+  window.addEventListener('scroll', updateProgress);
+  
+  // Initialize on load
+  updateProgress();
 
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
