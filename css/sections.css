@@ -1399,6 +1399,48 @@
   color: #fff;
 }
 
+/* WhatsApp Tooltip Bubble styling */
+.whatsapp-float__tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(15px) scale(0.8);
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: 20px 20px 4px 20px;
+  font-size: var(--fs-sm);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), visibility 0.3s;
+}
+
+/* Tooltip arrow pointer */
+.whatsapp-float__tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--bg-card-solid);
+}
+
+/* Show tooltip states */
+.whatsapp-float:hover .whatsapp-float__tooltip,
+.whatsapp-float.show-tooltip .whatsapp-float__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
 .back-to-top {
   position: fixed;
   bottom: 104px;
