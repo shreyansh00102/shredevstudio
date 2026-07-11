@@ -37,13 +37,14 @@
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   font-family: var(--font-heading);
   font-weight: var(--fw-extrabold);
   font-size: var(--fs-xl);
   color: var(--text-heading);
   text-decoration: none;
   z-index: 1001;
+  white-space: nowrap;
 }
 
 .navbar__logo-icon {
@@ -303,6 +304,28 @@
 @media (max-width: 900px) {
   .btn--nav-cta {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__container {
+    padding: 0 var(--space-3);
+  }
+  
+  .navbar__logo {
+    font-size: var(--fs-md); /* Shrink font size slightly */
+    gap: var(--space-2);
+  }
+  
+  .navbar__logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: var(--fs-base);
+  }
+  
+  .navbar__logo-icon svg {
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 
