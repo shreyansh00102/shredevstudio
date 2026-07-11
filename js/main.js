@@ -452,6 +452,26 @@ function initCostCalculator() {
     quoteBtn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(messageText)}`;
   }
 
+  // Explicit click handler to guarantee redirection works on all devices/browsers
+  quoteBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const serviceNames = { web: 'Web Development', app: 'Android App Development', seo: 'SEO & Marketing' };
+    const sizeNames = { basic: 'Basic', medium: 'Medium/Standard', custom: 'Enterprise/Custom' };
+    const urgencyNames = { standard: 'Flexible (Standard)', urgent: 'Fast Delivery' };
+    const priceText = priceDisplay.textContent;
+
+    const messageText = `*Project Estimate - Shre Dev Studio*\n` +
+                        `-----------------------------------------\n` +
+                        `*🛠️ Service:* ${serviceNames[selectedService]}\n` +
+                        `*📏 Scale/Complexity:* ${sizeNames[selectedSize]}\n` +
+                        `*⏱️ Timeline:* ${urgencyNames[selectedUrgency]}\n` +
+                        `*💰 Est. Cost:* ${priceText}`;
+
+    const waPhone = '917068286755';
+    const waUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(messageText)}`;
+    window.open(waUrl, '_blank');
+  });
+
   function handleSelect(elements, callback) {
     elements.forEach(el => {
       el.addEventListener('click', () => {
