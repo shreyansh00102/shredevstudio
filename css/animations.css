@@ -245,28 +245,7 @@
 .delay-7 { transition-delay: 0.7s !important; }
 .delay-8 { transition-delay: 0.8s !important; }
 
-/* ============================================
-   Hero-specific animations
-   ============================================ */
-.hero__content {
-  animation: fadeInUp 1s ease-out 0.3s both;
-}
-
-.hero__title {
-  animation: fadeInUp 1s ease-out 0.5s both;
-}
-
-.hero__subtitle {
-  animation: fadeInUp 1s ease-out 0.7s both;
-}
-
-.hero__cta {
-  animation: fadeInUp 1s ease-out 0.9s both;
-}
-
-.hero__image {
-  animation: fadeInRight 1s ease-out 0.6s both;
-}
+/* Hero animations are now defined in sections.css for the cinematic hero */
 
 /* ============================================
    Floating particles for hero

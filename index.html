@@ -59,7 +59,7 @@
   <!-- ============================================
        Navigation
        ============================================ -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <nav class="navbar navbar--transparent" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar__container">
       <a href="#" class="navbar__logo" aria-label="Shre Dev Studio Home">
         <div class="navbar__logo-icon">
@@ -75,13 +75,13 @@
         <a href="#about" class="navbar__link" role="menuitem">About</a>
         <a href="#services" class="navbar__link" role="menuitem">Services</a>
         <a href="#portfolio" class="navbar__link" role="menuitem">Portfolio</a>
-        <a href="#testimonials" class="navbar__link" role="menuitem">Testimonials</a>
-        <a href="#faq" class="navbar__link" role="menuitem">FAQ</a>
+        <a href="#testimonials" class="navbar__link" role="menuitem">Blog</a>
         <a href="#contact" class="navbar__link" role="menuitem">Contact</a>
       </div>
 
       <div class="navbar__actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="#contact" class="btn btn--primary btn--nav-cta">Get Started <span class="btn-arrow">→</span></a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span class="hamburger__line"></span>
           <span class="hamburger__line"></span>
@@ -97,78 +97,88 @@
   <main>
 
     <!-- ============================================
-         Hero Section
+         Hero Section — Cinematic Full-Screen
          ============================================ -->
-    <section class="hero section" id="home">
+    <section class="hero-cinematic" id="home">
+      <!-- Background Image -->
+      <div class="hero-cinematic__bg">
+        <img src="assets/images/hero-cinematic.png" alt="Shre Dev Studio — Digital Excellence" loading="eager">
+      </div>
+
+      <!-- Gradient Overlay -->
+      <div class="hero-cinematic__overlay"></div>
+
       <!-- Floating particles -->
       <div class="particle particle--1"></div>
       <div class="particle particle--2"></div>
       <div class="particle particle--3"></div>
-      <div class="particle particle--4"></div>
-      <div class="particle particle--5"></div>
 
-      <div class="container hero__container">
-        <div class="hero__content">
-          <div class="hero__label">
-            <span class="hero__label-dot"></span>
-            Available for new projects
-          </div>
+      <!-- Hero Content -->
+      <div class="hero-cinematic__content">
+        <h1 class="hero-cinematic__title">
+          Building
+          <span class="hero-cinematic__title-highlight">Digital</span>
+          Excellence
+        </h1>
 
-          <h1 class="hero__title">
-            Build Your <span class="hero__title-highlight">Digital Success</span> with Shre Dev Studio
-          </h1>
+        <p class="hero-cinematic__subtitle">
+          We help ambitious brands turn ideas into<br>
+          powerful digital experiences that drive growth.
+        </p>
 
-          <p class="hero__subtitle">
-            We help businesses grow online through professional website development, Android app development, SEO,
-            branding, and complete digital solutions.
-          </p>
-
-          <div class="hero__cta">
-            <a href="#contact" class="btn btn--primary btn--lg">
-              🚀 Get Started
-            </a>
-            <a href="#contact" class="btn btn--secondary btn--lg">
-              📞 Free Consultation
-            </a>
-            <div class="dropdown btn--dropdown-container">
-              <button class="btn btn--accent btn--lg dropdown__trigger" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center; gap: 8px;">
-                🛠️ Engineers Portfolio <span class="dropdown__arrow" style="font-size: 10px; transition: transform var(--transition-normal);">▼</span>
-              </button>
-              <div class="dropdown__menu">
-                <a href="https://zameerkhan.online" class="dropdown__item" target="_blank" rel="noopener">👨‍💻 Zameer Khan Portfolio</a>
-                <a href="https://shreyansh-two.vercel.app" class="dropdown__item" target="_blank" rel="noopener">👨‍💻 Shreyansh Portfolio</a>
-              </div>
+        <div class="hero-cinematic__cta">
+          <a href="#services" class="btn btn--primary btn--lg hero-cinematic__btn-explore">
+            Explore Services <span class="btn-arrow">→</span>
+          </a>
+          <div class="hero-cinematic__play-btn" role="button" tabindex="0" aria-label="Play Video">
+            <div class="hero-cinematic__play-icon">
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 8.134a1 1 0 0 1 0 1.732l-13.5 7.794A1 1 0 0 1 0 16.794V1.206A1 1 0 0 1 1.5.34L15 8.134z" fill="white"/>
+              </svg>
             </div>
-          </div>
-
-          <div class="hero__stats">
-            <div class="hero__stat">
-              <div class="hero__stat-number" data-counter="150" data-suffix="+">0+</div>
-              <div class="hero__stat-label">Projects Completed</div>
-            </div>
-            <div class="hero__stat">
-              <div class="hero__stat-number" data-counter="80" data-suffix="+">0+</div>
-              <div class="hero__stat-label">Happy Clients</div>
-            </div>
-            <div class="hero__stat">
-              <div class="hero__stat-number" data-counter="5" data-suffix="+">0+</div>
-              <div class="hero__stat-label">Years Experience</div>
-            </div>
+            <span>Play Video</span>
           </div>
         </div>
 
-        <div class="hero__image-wrapper hero__image">
-          <div class="hero__image-glow"></div>
-          <img src="assets/images/hero-background.png"
-            alt="Shre Dev Studio - Engineers and Mountain theme" class="hero__image" loading="eager"
-            width="600" height="400">
+        <!-- Engineers Portfolio Dropdown -->
+        <div class="hero-cinematic__portfolio-dropdown">
+          <div class="dropdown btn--dropdown-container">
+            <button class="btn btn--accent btn--sm dropdown__trigger" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center; gap: 8px;">
+              🛠️ Engineers Portfolio <span class="dropdown__arrow" style="font-size: 10px; transition: transform var(--transition-normal);">▼</span>
+            </button>
+            <div class="dropdown__menu">
+              <a href="https://zameerkhan.online" class="dropdown__item" target="_blank" rel="noopener">👨‍💻 Zameer Khan Portfolio</a>
+              <a href="https://shreyansh-two.vercel.app" class="dropdown__item" target="_blank" rel="noopener">👨‍💻 Shreyansh Portfolio</a>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Trusted Companies Bar -->
+      <div class="hero-cinematic__trusted">
+        <span class="hero-cinematic__trusted-label">Trusted by innovative companies worldwide</span>
+        <div class="hero-cinematic__trusted-logos">
+          <div class="hero-cinematic__logo-item">
+            <span class="hero-cinematic__logo-text logo--bold">aven.</span>
+          </div>
+          <div class="hero-cinematic__logo-item">
+            <span class="hero-cinematic__logo-text logo--caps">VISIONIX</span>
+          </div>
+          <div class="hero-cinematic__logo-item">
+            <span class="hero-cinematic__logo-text logo--icon">◈ PULSE</span>
+          </div>
+          <div class="hero-cinematic__logo-item">
+            <span class="hero-cinematic__logo-text logo--icon">◎ Cloudly</span>
+          </div>
+          <div class="hero-cinematic__logo-item">
+            <span class="hero-cinematic__logo-text logo--icon">◉ LightAI</span>
+          </div>
+        </div>
+      </div>
 
-
-      <div class="hero__scroll-indicator">
-        <div class="hero__scroll-mouse"></div>
+      <!-- Scroll Indicator -->
+      <div class="hero-cinematic__scroll">
+        <div class="hero-cinematic__scroll-mouse"></div>
         <span>Scroll to explore</span>
       </div>
     </section>
