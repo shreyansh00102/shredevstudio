@@ -2018,3 +2018,124 @@
     padding: var(--space-6) var(--space-4);
   }
 }
+
+/* ============================================
+   Development Services by Location
+   ============================================ */
+.locations-section {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(99, 102, 241, 0.03) 50%, var(--bg-primary) 100%);
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.location-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.location-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.location-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
+  color: #fff;
+}
+
+.location-card:hover::before {
+  opacity: 0.12;
+}
+
+.location-card__icon {
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.location-card__city {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.locations-cta {
+  text-align: center;
+  margin-top: var(--space-2);
+}
+
+.btn--outline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-7);
+  background: transparent;
+  border: 1.5px solid rgba(99, 102, 241, 0.4);
+  border-radius: var(--radius-pill);
+  color: var(--color-primary-light);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn--outline:hover {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .locations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .location-card {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .location-card__city {
+    font-size: var(--fs-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+}
