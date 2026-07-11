@@ -394,6 +394,7 @@ function initCostCalculator() {
   const urgencySelects = calculator.querySelectorAll('.calc-pill[data-type="urgency"]');
   const priceDisplay = calculator.querySelector('#calc-price-val');
   const quoteBtn = calculator.querySelector('#calc-quote-btn');
+  const resultCard = calculator.querySelector('.calc-result-card');
 
   let selectedService = 'web';
   let selectedSize = 'medium';
@@ -424,6 +425,16 @@ function initCostCalculator() {
     const finalPrice = Math.round(base * multiplierSize * multiplierUrgency);
 
     priceDisplay.textContent = `₹${finalPrice.toLocaleString('en-IN')}`;
+
+    // Update background photo of result card based on selected service
+    const serviceBgs = {
+      web: 'assets/images/calc-web.png',
+      app: 'assets/images/calc-app.png',
+      seo: 'assets/images/calc-seo.png'
+    };
+    if (resultCard) {
+      resultCard.style.backgroundImage = `url('${serviceBgs[selectedService]}')`;
+    }
 
     // Update WhatsApp link text on CTA button
     const serviceNames = { web: 'Web Development', app: 'Android App Development', seo: 'SEO & Marketing' };

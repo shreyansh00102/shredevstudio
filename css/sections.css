@@ -1943,7 +1943,8 @@
 }
 
 .calc-result-card {
-  background: rgba(5, 5, 20, 0.4);
+  position: relative;
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
@@ -1953,6 +1954,25 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.calc-result-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 26, 0.82);
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.calc-result-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .calc-price-label {
