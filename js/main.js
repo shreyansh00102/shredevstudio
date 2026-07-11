@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initWhatsAppTooltip();
   initDropdowns();
+  initCardGlow();
+  initCostCalculator();
 });
 
 /* ============================================
@@ -362,4 +364,98 @@ function initDropdowns() {
     dropdown.classList.remove('show-menu');
     trigger.setAttribute('aria-expanded', 'false');
   });
+}
+
+/* ============================================
+   Card Mouse Glow Follow Effect
+   ============================================ */
+function initCardGlow() {
+  const cards = document.querySelectorAll('.service-card, .portfolio-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/* ============================================
+   Interactive Cost Calculator
+   ============================================ */
+function initCostCalculator() {
+  const calculator = document.getElementById('project-calculator');
+  if (!calculator) return;
+
+  const serviceSelects = calculator.querySelectorAll('.calc-pill[data-type="service"]');
+  const sizeSelects = calculator.querySelectorAll('.calc-pill[data-type="size"]');
+  const urgencySelects = calculator.querySelectorAll('.calc-pill[data-type="urgency"]');
+  const priceDisplay = calculator.querySelector('#calc-price-val');
+  const quoteBtn = calculator.querySelector('#calc-quote-btn');
+
+  let selectedService = 'web';
+  let selectedSize = 'medium';
+  let selectedUrgency = 'standard';
+
+  // Base Prices (INR)
+  const pricing = {
+    service: {
+      web: 8000,
+      app: 18000,
+      seo: 5000
+    },
+    size: {
+      basic: 0.7,
+      medium: 1.0,
+      custom: 2.2
+    },
+    urgency: {
+      standard: 1.0,
+      urgent: 1.3
+    }
+  };
+
+  function updatePrice() {
+    const base = pricing.service[selectedService];
+    const multiplierSize = pricing.size[selectedSize];
+    const multiplierUrgency = pricing.urgency[selectedUrgency];
+    const finalPrice = Math.round(base * multiplierSize * multiplierUrgency);
+
+    priceDisplay.textContent = `₹${finalPrice.toLocaleString('en-IN')}`;
+
+    // Update WhatsApp link text on CTA button
+    const serviceNames = { web: 'Web Development', app: 'Android App Development', seo: 'SEO & Marketing' };
+    const sizeNames = { basic: 'Basic', medium: 'Medium/Standard', custom: 'Enterprise/Custom' };
+    const urgencyNames = { standard: 'Flexible (Standard)', urgent: 'Fast Delivery' };
+
+    const messageText = `*Project Estimate - Shre Dev Studio*\n` +
+                        `-----------------------------------------\n` +
+                        `*🛠️ Service:* ${serviceNames[selectedService]}\n` +
+                        `*📏 Scale/Complexity:* ${sizeNames[selectedSize]}\n` +
+                        `*⏱️ Timeline:* ${urgencyNames[selectedUrgency]}\n` +
+                        `*💰 Est. Cost:* ₹${finalPrice.toLocaleString('en-IN')}`;
+
+    const waPhone = '917068286755';
+    quoteBtn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(messageText)}`;
+  }
+
+  function handleSelect(elements, callback) {
+    elements.forEach(el => {
+      el.addEventListener('click', () => {
+        elements.forEach(x => x.classList.remove('active'));
+        el.classList.add('active');
+        callback(el.dataset.value);
+        updatePrice();
+      });
+    });
+  }
+
+  handleSelect(serviceSelects, (val) => { selectedService = val; });
+  handleSelect(sizeSelects, (val) => { selectedSize = val; });
+  handleSelect(urgencySelects, (val) => { selectedUrgency = val; });
+
+  // Initial calculation
+  updatePrice();
 }

@@ -25,6 +25,8 @@
   <meta name="twitter:description"
     content="Professional website development, Android app development, SEO, branding, and complete digital solutions.">
 
+  <link rel="canonical" href="https://www.shredevstudio.com" />
+
   <title>Shre Dev Studio — Transforming Ideas into Powerful Digital Solutions</title>
 
   <!-- Preconnect to Google Fonts -->
@@ -48,8 +50,15 @@
     "name": "Shre Dev Studio",
     "description": "Professional digital solutions agency providing website development, Android app development, SEO, branding, and digital marketing services.",
     "url": "https://www.shredevstudio.com",
+    "logo": "https://www.shredevstudio.com/assets/images/hero-illustration.png",
     "serviceType": ["Web Development", "App Development", "SEO", "Digital Marketing", "Graphic Design"],
-    "areaServed": "Worldwide"
+    "areaServed": "Worldwide",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://github.com/shreyansh00102",
+      "https://www.instagram.com/shre_webstudio",
+      "https://www.linkedin.com/in/shreyansh-upadhyay-8b54b6243"
+    ]
   }
   </script>
 </head>
@@ -382,6 +391,65 @@
     </section>
 
     <!-- ============================================
+         Project Cost Calculator Section
+         ============================================ -->
+    <section class="section calculator-section" id="estimator">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <span class="section__label">Instant Quote</span>
+          <h2 class="section__title">Estimate Your <span class="gradient-text">Project Cost</span></h2>
+          <p class="section__subtitle">Select your requirements below to calculate a baseline price and chat with us on WhatsApp to finalize.</p>
+        </div>
+
+        <div class="calculator-wrapper animate-on-scroll" id="project-calculator">
+          <div class="calc-grid">
+            <!-- Selector Options -->
+            <div class="calc-options">
+              <!-- Service Category -->
+              <div>
+                <div class="calc-group-title">1. Choose Service</div>
+                <div class="calc-pills">
+                  <div class="calc-pill active" data-type="service" data-value="web">🌐 Website Development</div>
+                  <div class="calc-pill" data-type="service" data-value="app">📱 Android App Development</div>
+                  <div class="calc-pill" data-type="service" data-value="seo">📈 SEO & Digital Marketing</div>
+                </div>
+              </div>
+
+              <!-- Scope / Complexity -->
+              <div>
+                <div class="calc-group-title">2. Choose Complexity</div>
+                <div class="calc-pills">
+                  <div class="calc-pill" data-type="size" data-value="basic">Basic (Landing Page/One-Page)</div>
+                  <div class="calc-pill active" data-type="size" data-value="medium">Medium (Standard/CMS/Blog)</div>
+                  <div class="calc-pill" data-type="size" data-value="custom">Custom (E-commerce/App/Enterprise)</div>
+                </div>
+              </div>
+
+              <!-- Delivery Time -->
+              <div>
+                <div class="calc-group-title">3. Delivery Timeline</div>
+                <div class="calc-pills">
+                  <div class="calc-pill active" data-type="urgency" data-value="standard">Flexible (Standard 2-4 weeks)</div>
+                  <div class="calc-pill" data-type="urgency" data-value="urgent">Express Delivery (Urgent)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Result Card -->
+            <div class="calc-result-card">
+              <div class="calc-price-label">Estimated Baseline Cost</div>
+              <div class="calc-price-val" id="calc-price-val">₹8,000</div>
+              <div class="calc-price-note">*This is an initial baseline estimate. Final pricing may vary depending on customized scope features.</div>
+              <a href="#" class="btn btn--primary btn--lg" id="calc-quote-btn" target="_blank" rel="noopener">
+                💬 Get Estimate on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
          Process Section
          ============================================ -->
     <section class="section" id="process">
@@ -538,7 +606,7 @@
 
         <div class="portfolio__grid">
           <div class="portfolio-card animate-on-scroll delay-1" data-category="web">
-            <img src="assets/images/portfolio-web.png" alt="E-commerce website project showcase"
+            <img src="assets/images/portfolio-web.png" alt="Custom React E-commerce Website Development Project Showcase"
               class="portfolio-card__image" loading="lazy" width="400" height="260">
             <div class="portfolio-card__overlay">
               <h3 class="portfolio-card__title">E-Commerce Platform</h3>
@@ -553,7 +621,7 @@
           </div>
 
           <div class="portfolio-card animate-on-scroll delay-2" data-category="app">
-            <img src="assets/images/portfolio-app.png" alt="Mobile application project showcase"
+            <img src="assets/images/portfolio-app.png" alt="Custom Android App Development with Firebase Integration Showcase"
               class="portfolio-card__image" loading="lazy" width="400" height="260">
             <div class="portfolio-card__overlay">
               <h3 class="portfolio-card__title">Business Management App</h3>
@@ -568,7 +636,7 @@
           </div>
 
           <div class="portfolio-card animate-on-scroll delay-3" data-category="seo">
-            <img src="assets/images/portfolio-seo.png" alt="SEO analytics dashboard project"
+            <img src="assets/images/portfolio-seo.png" alt="Search Engine Optimization Campaign Analytics Dashboard"
               class="portfolio-card__image" loading="lazy" width="400" height="260">
             <div class="portfolio-card__overlay">
               <h3 class="portfolio-card__title">SEO Campaign Dashboard</h3>
@@ -583,7 +651,7 @@
           </div>
 
           <div class="portfolio-card animate-on-scroll delay-1" data-category="web">
-            <img src="assets/images/portfolio-web.png" alt="Corporate website project" class="portfolio-card__image"
+            <img src="assets/images/portfolio-web.png" alt="WordPress Corporate Website Development Project" class="portfolio-card__image"
               loading="lazy" width="400" height="260">
             <div class="portfolio-card__overlay">
               <h3 class="portfolio-card__title">Corporate Website</h3>
@@ -598,7 +666,7 @@
           </div>
 
           <div class="portfolio-card animate-on-scroll delay-2" data-category="app">
-            <img src="assets/images/portfolio-app.png" alt="Educational app project" class="portfolio-card__image"
+            <img src="assets/images/portfolio-app.png" alt="E-Learning Android Mobile Application Development" class="portfolio-card__image"
               loading="lazy" width="400" height="260">
             <div class="portfolio-card__overlay">
               <h3 class="portfolio-card__title">E-Learning Platform</h3>
@@ -613,7 +681,7 @@
           </div>
 
           <div class="portfolio-card animate-on-scroll delay-3" data-category="design">
-            <img src="assets/images/portfolio-seo.png" alt="Brand identity design project" class="portfolio-card__image"
+            <img src="assets/images/portfolio-seo.png" alt="Brand Identity Design and Graphic Assets Guidelines Package" class="portfolio-card__image"
               loading="lazy" width="400" height="260">
             <div class="portfolio-card__overlay">
               <h3 class="portfolio-card__title">Brand Identity Package</h3>
