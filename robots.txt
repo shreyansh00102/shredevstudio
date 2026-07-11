@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.shredevstudio.com/sitemap.xml
+Sitemap: https://shredevstudio.vercel.app/sitemap.xml
