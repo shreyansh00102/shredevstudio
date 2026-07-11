@@ -93,6 +93,8 @@ function initMobileMenu() {
     menu.classList.remove('open');
     overlay.classList.remove('visible');
     document.body.style.overflow = '';
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
   }
 
   function openMenu() {
@@ -100,6 +102,8 @@ function initMobileMenu() {
     menu.classList.add('open');
     overlay.classList.add('visible');
     document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
   }
 
   hamburger.addEventListener('click', () => {

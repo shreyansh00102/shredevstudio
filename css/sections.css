@@ -617,7 +617,11 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .hero-cinematic__content {
+    padding: calc(var(--nav-height) + var(--space-6)) var(--space-4) var(--space-10);
+  }
+
   .hero-cinematic__title {
     font-size: 2.2rem;
   }
@@ -1150,6 +1154,7 @@
 
 .testimonial-card {
   min-width: 100%;
+  flex-shrink: 0;
   padding: var(--space-2);
 }
 
@@ -2134,7 +2139,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .locations-grid {
     grid-template-columns: 1fr;
   }
