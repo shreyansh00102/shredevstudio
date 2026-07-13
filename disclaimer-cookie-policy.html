@@ -32,6 +32,29 @@
        Disclaimer & Cookie Policy Page — Styles
        ============================================ */
 
+    :root {
+      /* Theme overrides: Deep Wine, Crimson & Bronze */
+      --bg-primary: #120409;
+      --bg-secondary: #220711;
+      --bg-card: rgba(38, 8, 19, 0.65);
+      --bg-card-solid: #260813;
+      --border-color: rgba(219, 39, 119, 0.2);
+      --border-glow: rgba(219, 39, 119, 0.45);
+      --color-primary: #db2777;
+      --color-primary-rgb: 219, 39, 119;
+      --color-primary-light: #f472b6;
+      --color-secondary: #eab308;
+      --color-accent: #f43f5e;
+      
+      --gradient-primary: linear-gradient(135deg, #db2777, #f43f5e);
+      --gradient-secondary: linear-gradient(135deg, #f472b6, #eab308);
+      --gradient-accent: linear-gradient(135deg, #db2777, #eab308);
+      --gradient-hero: linear-gradient(135deg, #120409 0%, #360b1b 50%, #120409 100%);
+      --gradient-glow: radial-gradient(ellipse at 50% 0%, rgba(219, 39, 119, 0.2) 0%, transparent 60%);
+      --shadow-glow: 0 0 20px rgba(219, 39, 119, 0.15);
+      --shadow-glow-lg: 0 0 40px rgba(219, 39, 119, 0.3);
+    }
+
     .disclaimer-hero {
       position: relative;
       padding: 160px 0 80px;
@@ -58,10 +81,10 @@
       width: 80px;
       height: 80px;
       border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-primary);
       margin-bottom: var(--space-8);
       font-size: 2.5rem;
-      box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 0 40px rgba(var(--color-primary-rgb), 0.3);
       animation: floatGently 3s ease-in-out infinite;
     }
 
@@ -80,7 +103,7 @@
     }
 
     .disclaimer-hero__title span {
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-accent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -131,7 +154,7 @@
       transform: translateX(-50%);
       width: 100%;
       height: 200px;
-      background: radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(var(--color-primary-rgb), 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -154,8 +177,8 @@
     }
 
     .disclaimer-toc:hover {
-      border-color: rgba(245, 158, 11, 0.3);
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-glow);
     }
 
     .disclaimer-toc__title {
@@ -200,7 +223,7 @@
     }
 
     .disclaimer-toc__link:hover {
-      background: rgba(245, 158, 11, 0.08);
+      background: rgba(var(--color-primary-rgb), 0.08);
       color: var(--color-warning);
       transform: translateX(4px);
     }
@@ -212,7 +235,7 @@
       width: 26px;
       height: 26px;
       border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-primary);
       color: #fff;
       font-size: var(--fs-xs);
       font-weight: var(--fw-semibold);
@@ -262,14 +285,14 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-primary);
       opacity: 0;
       transition: opacity 0.35s ease;
     }
 
     .disclaimer-section__card:hover {
-      border-color: rgba(245, 158, 11, 0.3);
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.12);
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-glow);
       transform: translateY(-2px);
     }
 
@@ -291,7 +314,7 @@
       width: 48px;
       height: 48px;
       border-radius: var(--radius-md);
-      background: rgba(245, 158, 11, 0.1);
+      background: rgba(var(--color-primary-rgb), 0.1);
       border: 1px solid var(--border-color);
       font-size: 1.3rem;
       flex-shrink: 0;
@@ -299,9 +322,9 @@
     }
 
     .disclaimer-section__card:hover .disclaimer-section__icon {
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-primary);
       border-color: transparent;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+      box-shadow: var(--shadow-glow);
     }
 
     .disclaimer-section__number {
@@ -347,8 +370,8 @@
       gap: var(--space-3);
       padding: var(--space-3) var(--space-4);
       border-radius: var(--radius-sm);
-      background: rgba(245, 158, 11, 0.04);
-      border: 1px solid rgba(245, 158, 11, 0.06);
+      background: rgba(var(--color-primary-rgb), 0.04);
+      border: 1px solid rgba(var(--color-primary-rgb), 0.06);
       color: var(--text-secondary);
       font-family: var(--font-body);
       font-size: var(--fs-sm);
@@ -357,8 +380,8 @@
     }
 
     .disclaimer-section__list-item:hover {
-      background: rgba(245, 158, 11, 0.08);
-      border-color: rgba(245, 158, 11, 0.15);
+      background: rgba(var(--color-primary-rgb), 0.08);
+      border-color: var(--border-color);
       transform: translateX(4px);
     }
 
@@ -367,7 +390,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-primary);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -434,10 +457,10 @@
     }
 
     .disclaimer-back:hover {
-      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      background: var(--gradient-primary);
       color: #fff;
       border-color: transparent;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+      box-shadow: var(--shadow-glow);
       transform: translateX(-2px);
     }
 

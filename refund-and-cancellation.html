@@ -32,6 +32,29 @@
        Refund & Cancellation Policy Page — Styles
        ============================================ */
 
+    :root {
+      /* Theme overrides: Sunset Terracotta, Coral & Peach */
+      --bg-primary: #150806;
+      --bg-secondary: #260f0b;
+      --bg-card: rgba(43, 16, 12, 0.65);
+      --bg-card-solid: #2b100c;
+      --border-color: rgba(249, 115, 22, 0.2);
+      --border-glow: rgba(249, 115, 22, 0.45);
+      --color-primary: #f97316;
+      --color-primary-rgb: 249, 115, 22;
+      --color-primary-light: #fdba74;
+      --color-secondary: #facc15;
+      --color-accent: #ef4444;
+      
+      --gradient-primary: linear-gradient(135deg, #f97316, #ef4444);
+      --gradient-secondary: linear-gradient(135deg, #fdba74, #facc15);
+      --gradient-accent: linear-gradient(135deg, #f97316, #facc15);
+      --gradient-hero: linear-gradient(135deg, #150806 0%, #3e1610 50%, #150806 100%);
+      --gradient-glow: radial-gradient(ellipse at 50% 0%, rgba(249, 115, 22, 0.2) 0%, transparent 60%);
+      --shadow-glow: 0 0 20px rgba(249, 115, 22, 0.15);
+      --shadow-glow-lg: 0 0 40px rgba(249, 115, 22, 0.3);
+    }
+
     .refund-hero {
       position: relative;
       padding: 160px 0 80px;
@@ -58,10 +81,10 @@
       width: 80px;
       height: 80px;
       border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-primary);
       margin-bottom: var(--space-8);
       font-size: 2.5rem;
-      box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
+      box-shadow: 0 0 40px rgba(var(--color-primary-rgb), 0.3);
       animation: floatGently 3s ease-in-out infinite;
     }
 
@@ -80,7 +103,7 @@
     }
 
     .refund-hero__title span {
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-accent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -131,7 +154,7 @@
       transform: translateX(-50%);
       width: 100%;
       height: 200px;
-      background: radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(var(--color-primary-rgb), 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -154,8 +177,8 @@
     }
 
     .refund-toc:hover {
-      border-color: rgba(6, 182, 212, 0.3);
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-glow);
     }
 
     .refund-toc__title {
@@ -200,7 +223,7 @@
     }
 
     .refund-toc__link:hover {
-      background: rgba(6, 182, 212, 0.08);
+      background: rgba(var(--color-primary-rgb), 0.08);
       color: var(--color-accent);
       transform: translateX(4px);
     }
@@ -212,7 +235,7 @@
       width: 26px;
       height: 26px;
       border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-primary);
       color: #fff;
       font-size: var(--fs-xs);
       font-weight: var(--fw-semibold);
@@ -260,14 +283,14 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-primary);
       opacity: 0;
       transition: opacity 0.35s ease;
     }
 
     .refund-section__card:hover {
-      border-color: rgba(6, 182, 212, 0.3);
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.12);
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-glow);
       transform: translateY(-2px);
     }
 
@@ -289,7 +312,7 @@
       width: 48px;
       height: 48px;
       border-radius: var(--radius-md);
-      background: rgba(6, 182, 212, 0.1);
+      background: rgba(var(--color-primary-rgb), 0.1);
       border: 1px solid var(--border-color);
       font-size: 1.3rem;
       flex-shrink: 0;
@@ -297,9 +320,9 @@
     }
 
     .refund-section__card:hover .refund-section__icon {
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-primary);
       border-color: transparent;
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+      box-shadow: var(--shadow-glow);
     }
 
     .refund-section__number {
@@ -350,8 +373,8 @@
       gap: var(--space-3);
       padding: var(--space-3) var(--space-4);
       border-radius: var(--radius-sm);
-      background: rgba(6, 182, 212, 0.04);
-      border: 1px solid rgba(6, 182, 212, 0.06);
+      background: rgba(var(--color-primary-rgb), 0.04);
+      border: 1px solid rgba(var(--color-primary-rgb), 0.06);
       color: var(--text-secondary);
       font-family: var(--font-body);
       font-size: var(--fs-sm);
@@ -360,8 +383,8 @@
     }
 
     .refund-section__list-item:hover {
-      background: rgba(6, 182, 212, 0.08);
-      border-color: rgba(6, 182, 212, 0.15);
+      background: rgba(var(--color-primary-rgb), 0.08);
+      border-color: var(--border-color);
       transform: translateX(4px);
     }
 
@@ -370,7 +393,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-primary);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -387,8 +410,8 @@
     .refund-section__highlight {
       padding: var(--space-4) var(--space-5);
       border-radius: var(--radius-sm);
-      background: rgba(6, 182, 212, 0.06);
-      border-left: 3px solid var(--color-accent);
+      background: rgba(var(--color-primary-rgb), 0.06);
+      border-left: 3px solid var(--color-primary);
       color: var(--text-secondary);
       font-family: var(--font-body);
       font-size: var(--fs-sm);
@@ -431,10 +454,10 @@
     }
 
     .refund-back:hover {
-      background: linear-gradient(135deg, #06b6d4, #10b981);
+      background: var(--gradient-primary);
       color: #fff;
       border-color: transparent;
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+      box-shadow: var(--shadow-glow);
       transform: translateX(-2px);
     }
 
