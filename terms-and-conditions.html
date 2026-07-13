@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Terms & Conditions — Shre Dev Studio. Read our terms of service for website development, payments, delivery, and more.">
+  <meta name="keywords" content="terms and conditions, terms of service, Shre Dev Studio">
+  <meta name="author" content="Shre Dev Studio">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://shredevstudio.vercel.app/terms-and-conditions.html" />
+
+  <title>Terms & Conditions — Shre Dev Studio</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' text-anchor='middle' fill='white'>S</text></svg>">
+
+  <style>
+    /* ============================================
+       Terms & Conditions Page — Styles
+       ============================================ */
+
+    .terms-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      text-align: center;
+      overflow: hidden;
+      background: var(--gradient-hero);
+    }
+
+    .terms-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--gradient-glow);
+      pointer-events: none;
+    }
+
+    .terms-hero__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-xl);
+      background: var(--gradient-secondary);
+      margin-bottom: var(--space-8);
+      font-size: 2.5rem;
+      box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+      animation: floatGently 3s ease-in-out infinite;
+    }
+
+    @keyframes floatGently {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .terms-hero__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-5xl);
+      font-weight: var(--fw-bold);
+      color: var(--text-heading);
+      margin-bottom: var(--space-4);
+      line-height: var(--lh-tight);
+    }
+
+    .terms-hero__title span {
+      background: var(--gradient-secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .terms-hero__subtitle {
+      font-family: var(--font-body);
+      font-size: var(--fs-md);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: var(--lh-relaxed);
+    }
+
+    .terms-hero__date {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-6);
+      padding: var(--space-2) var(--space-5);
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: var(--fs-sm);
+      font-family: var(--font-body);
+      backdrop-filter: blur(10px);
+    }
+
+    .terms-hero__date svg {
+      width: 14px;
+      height: 14px;
+      color: var(--color-secondary);
+    }
+
+    /* Content Area */
+    .terms-content {
+      padding: var(--space-20) var(--space-6);
+      background: var(--bg-primary);
+      position: relative;
+    }
+
+    .terms-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 200px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .terms-container {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Table of Contents */
+    .terms-toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      margin-bottom: var(--space-12);
+      backdrop-filter: blur(10px);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .terms-toc:hover {
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .terms-toc__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-semibold);
+      color: var(--text-heading);
+      margin-bottom: var(--space-5);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .terms-toc__title svg {
+      color: var(--color-secondary);
+    }
+
+    .terms-toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--space-2);
+    }
+
+    .terms-toc__item {
+      display: block;
+    }
+
+    .terms-toc__link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: var(--fs-sm);
+      font-family: var(--font-body);
+      transition: all 0.25s ease;
+    }
+
+    .terms-toc__link:hover {
+      background: rgba(139, 92, 246, 0.08);
+      color: var(--color-secondary);
+      transform: translateX(4px);
+    }
+
+    .terms-toc__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient-secondary);
+      color: #fff;
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      flex-shrink: 0;
+    }
+
+    /* Terms Sections */
+    .terms-section {
+      margin-bottom: var(--space-12);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .terms-section:nth-child(1)  { animation-delay: 0.05s; }
+    .terms-section:nth-child(2)  { animation-delay: 0.1s; }
+    .terms-section:nth-child(3)  { animation-delay: 0.15s; }
+    .terms-section:nth-child(4)  { animation-delay: 0.2s; }
+    .terms-section:nth-child(5)  { animation-delay: 0.25s; }
+    .terms-section:nth-child(6)  { animation-delay: 0.3s; }
+    .terms-section:nth-child(7)  { animation-delay: 0.35s; }
+    .terms-section:nth-child(8)  { animation-delay: 0.4s; }
+    .terms-section:nth-child(9)  { animation-delay: 0.45s; }
+    .terms-section:nth-child(10) { animation-delay: 0.5s; }
+    .terms-section:nth-child(11) { animation-delay: 0.55s; }
+    .terms-section:nth-child(12) { animation-delay: 0.6s; }
+    .terms-section:nth-child(13) { animation-delay: 0.65s; }
+    .terms-section:nth-child(14) { animation-delay: 0.7s; }
+    .terms-section:nth-child(15) { animation-delay: 0.75s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .terms-section__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-10);
+      backdrop-filter: blur(10px);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .terms-section__card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-secondary);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .terms-section__card:hover {
+      border-color: var(--border-glow);
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .terms-section__card:hover::before {
+      opacity: 1;
+    }
+
+    .terms-section__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+
+    .terms-section__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid var(--border-color);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      transition: all 0.35s ease;
+    }
+
+    .terms-section__card:hover .terms-section__icon {
+      background: var(--gradient-secondary);
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+
+    .terms-section__number {
+      font-family: var(--font-heading);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .terms-section__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--text-heading);
+      line-height: var(--lh-tight);
+    }
+
+    .terms-section__text {
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      color: var(--text-secondary);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-4);
+    }
+
+    .terms-section__text:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section__list {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-4) 0 0 0;
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .terms-section__list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-sm);
+      background: rgba(139, 92, 246, 0.04);
+      border: 1px solid rgba(139, 92, 246, 0.06);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      line-height: var(--lh-normal);
+      transition: all 0.25s ease;
+    }
+
+    .terms-section__list-item:hover {
+      background: rgba(139, 92, 246, 0.08);
+      border-color: rgba(139, 92, 246, 0.15);
+      transform: translateX(4px);
+    }
+
+    .terms-section__list-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--gradient-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .terms-section__list-icon svg {
+      width: 10px;
+      height: 10px;
+      color: #fff;
+    }
+
+    /* Back Button */
+    .terms-back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-5);
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 100px;
+      left: var(--space-6);
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .terms-back:hover {
+      background: var(--gradient-secondary);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+      transform: translateX(-2px);
+    }
+
+    .terms-back svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .terms-back:hover svg {
+      transform: translateX(-3px);
+    }
+
+    /* CTA at bottom */
+    .terms-cta {
+      text-align: center;
+      padding: var(--space-16) var(--space-6);
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .terms-cta__card {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: var(--space-12);
+      border-radius: var(--radius-xl);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .terms-cta__icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-4);
+    }
+
+    .terms-cta__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      font-weight: var(--fw-bold);
+      color: var(--text-heading);
+      margin-bottom: var(--space-3);
+    }
+
+    .terms-cta__text {
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      color: var(--text-secondary);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-8);
+    }
+
+    .terms-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-4) var(--space-8);
+      border-radius: var(--radius-full);
+      background: var(--gradient-secondary);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-base);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+    }
+
+    .terms-cta__btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+    }
+
+    /* Highlight box for important notes */
+    .terms-section__highlight {
+      padding: var(--space-4) var(--space-5);
+      border-radius: var(--radius-sm);
+      background: rgba(139, 92, 246, 0.06);
+      border-left: 3px solid var(--color-secondary);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      line-height: var(--lh-relaxed);
+      margin-top: var(--space-4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .terms-hero {
+        padding: 130px 0 60px;
+      }
+
+      .terms-hero__title {
+        font-size: var(--fs-3xl);
+      }
+
+      .terms-hero__icon {
+        width: 64px;
+        height: 64px;
+        font-size: 2rem;
+      }
+
+      .terms-section__card {
+        padding: var(--space-6);
+      }
+
+      .terms-toc__list {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-back {
+        position: static;
+        margin-bottom: var(--space-6);
+      }
+
+      .terms-content {
+        padding: var(--space-12) var(--space-4);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .terms-hero__title {
+        font-size: var(--fs-2xl);
+      }
+
+      .terms-section__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+       Navigation
+       ============================================ -->
+  <nav class="navbar navbar--transparent" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Shre Dev Studio Home">
+        <div class="navbar__logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+            stroke-width="9" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;">
+            <path d="M30 25 L15 50 L30 75 M70 25 L85 50 L70 75 M45 75 L55 25" />
+          </svg>
+        </div>
+        <span>Shre Dev Studio</span>
+      </a>
+
+      <div class="navbar__menu" id="navbar-menu" role="menubar">
+        <a href="index.html#home" class="navbar__link" role="menuitem">Home</a>
+        <a href="index.html#about" class="navbar__link" role="menuitem">About</a>
+        <a href="index.html#services" class="navbar__link" role="menuitem">Services</a>
+        <a href="index.html#portfolio" class="navbar__link" role="menuitem">Portfolio</a>
+        <a href="index.html#testimonials" class="navbar__link" role="menuitem">Testimonials</a>
+        <a href="index.html#contact" class="navbar__link" role="menuitem">Contact</a>
+      </div>
+
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="index.html#contact" class="btn btn--primary btn--nav-cta">Get Started <span class="btn-arrow">→</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <main>
+
+    <!-- ============================================
+         Terms & Conditions — Hero Section
+         ============================================ -->
+    <section class="terms-hero">
+      <div class="container">
+        <div class="terms-hero__icon">📜</div>
+        <h1 class="terms-hero__title">
+          Terms & <span>Conditions</span>
+        </h1>
+        <p class="terms-hero__subtitle">
+          By using our website or purchasing our services, you agree to the following terms and conditions. Please read them carefully.
+        </p>
+        <div class="terms-hero__date">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Last Updated: 13 July 2026
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         Terms & Conditions — Content
+         ============================================ -->
+    <section class="terms-content">
+      <div class="terms-container">
+
+        <!-- Back to Home -->
+        <a href="index.html" class="terms-back" id="terms-back-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Home
+        </a>
+
+        <!-- Table of Contents -->
+        <div class="terms-toc">
+          <h2 class="terms-toc__title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            Table of Contents
+          </h2>
+          <ul class="terms-toc__list">
+            <li class="terms-toc__item"><a href="#t-services" class="terms-toc__link"><span class="terms-toc__number">1</span>Services</a></li>
+            <li class="terms-toc__item"><a href="#t-project-req" class="terms-toc__link"><span class="terms-toc__number">2</span>Project Requirements</a></li>
+            <li class="terms-toc__item"><a href="#t-payment" class="terms-toc__link"><span class="terms-toc__number">3</span>Payment Terms</a></li>
+            <li class="terms-toc__item"><a href="#t-delivery" class="terms-toc__link"><span class="terms-toc__number">4</span>Delivery Time</a></li>
+            <li class="terms-toc__item"><a href="#t-revisions" class="terms-toc__link"><span class="terms-toc__number">5</span>Revisions</a></li>
+            <li class="terms-toc__item"><a href="#t-ip" class="terms-toc__link"><span class="terms-toc__number">6</span>Intellectual Property</a></li>
+            <li class="terms-toc__item"><a href="#t-client-resp" class="terms-toc__link"><span class="terms-toc__number">7</span>Client Responsibilities</a></li>
+            <li class="terms-toc__item"><a href="#t-liability" class="terms-toc__link"><span class="terms-toc__number">8</span>Limitation of Liability</a></li>
+            <li class="terms-toc__item"><a href="#t-maintenance" class="terms-toc__link"><span class="terms-toc__number">9</span>Website Maintenance</a></li>
+            <li class="terms-toc__item"><a href="#t-cancellation" class="terms-toc__link"><span class="terms-toc__number">10</span>Cancellation</a></li>
+            <li class="terms-toc__item"><a href="#t-refund" class="terms-toc__link"><span class="terms-toc__number">11</span>Refund Policy</a></li>
+            <li class="terms-toc__item"><a href="#t-thirdparty" class="terms-toc__link"><span class="terms-toc__number">12</span>Third-Party Costs</a></li>
+            <li class="terms-toc__item"><a href="#t-warranty" class="terms-toc__link"><span class="terms-toc__number">13</span>Warranty</a></li>
+            <li class="terms-toc__item"><a href="#t-law" class="terms-toc__link"><span class="terms-toc__number">14</span>Governing Law</a></li>
+            <li class="terms-toc__item"><a href="#t-changes" class="terms-toc__link"><span class="terms-toc__number">15</span>Changes to Terms</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 1 — Services -->
+        <div class="terms-section" id="t-services">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">🌐</div>
+              <div>
+                <div class="terms-section__number">Section 01</div>
+                <h2 class="terms-section__title">Services</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              We provide services including but not limited to:
+            </p>
+            <ul class="terms-section__list">
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Website Development
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Website Design
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Landing Pages
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Portfolio Websites
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Business Websites
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                E-commerce Websites
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Website Maintenance
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Digital Services
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 2 — Project Requirements -->
+        <div class="terms-section" id="t-project-req">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">📋</div>
+              <div>
+                <div class="terms-section__number">Section 02</div>
+                <h2 class="terms-section__title">Project Requirements</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              The client must provide all required content, images, logos, and information needed for project completion. Timely provision of materials ensures smooth project delivery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 3 — Payment Terms -->
+        <div class="terms-section" id="t-payment">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">💳</div>
+              <div>
+                <div class="terms-section__number">Section 03</div>
+                <h2 class="terms-section__title">Payment Terms</h2>
+              </div>
+            </div>
+            <ul class="terms-section__list">
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Work begins after the agreed advance payment is received.
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Remaining payment must be completed before final website delivery or deployment, unless otherwise agreed in writing.
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Additional work beyond the agreed scope will be charged separately.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 4 — Delivery Time -->
+        <div class="terms-section" id="t-delivery">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">⏱️</div>
+              <div>
+                <div class="terms-section__number">Section 04</div>
+                <h2 class="terms-section__title">Delivery Time</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Estimated delivery depends on project complexity and timely submission of required content by the client. Delays caused by incomplete information from the client are not our responsibility.
+            </p>
+            <div class="terms-section__highlight">
+              ⚡ Tip: Providing all materials upfront helps us deliver faster and more efficiently.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5 — Revisions -->
+        <div class="terms-section" id="t-revisions">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">🔄</div>
+              <div>
+                <div class="terms-section__number">Section 05</div>
+                <h2 class="terms-section__title">Revisions</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Reasonable revisions are included according to the agreed project scope. Major design or functionality changes requested after approval may incur additional charges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 6 — Intellectual Property -->
+        <div class="terms-section" id="t-ip">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">©️</div>
+              <div>
+                <div class="terms-section__number">Section 06</div>
+                <h2 class="terms-section__title">Intellectual Property</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Upon full payment, ownership of the completed website design and agreed deliverables transfers to the client, except for third-party software, licensed assets, fonts, plugins, or other components governed by their own licenses.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 7 — Client Responsibilities -->
+        <div class="terms-section" id="t-client-resp">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">👤</div>
+              <div>
+                <div class="terms-section__number">Section 07</div>
+                <h2 class="terms-section__title">Client Responsibilities</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              The client agrees to:
+            </p>
+            <ul class="terms-section__list">
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Provide accurate information.
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Ensure they have legal rights to all submitted content.
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Avoid providing illegal, copyrighted, defamatory, or prohibited material without proper authorization.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 8 — Limitation of Liability -->
+        <div class="terms-section" id="t-liability">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">⚠️</div>
+              <div>
+                <div class="terms-section__number">Section 08</div>
+                <h2 class="terms-section__title">Limitation of Liability</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Shre Dev Studio shall not be liable for losses resulting from:
+            </p>
+            <ul class="terms-section__list">
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Third-party hosting issues
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Domain registrar issues
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Internet outages
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Cyber attacks
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Client modifications after project delivery
+              </li>
+              <li class="terms-section__list-item">
+                <span class="terms-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Third-party plugin or API failures
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 9 — Website Maintenance -->
+        <div class="terms-section" id="t-maintenance">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">🔧</div>
+              <div>
+                <div class="terms-section__number">Section 09</div>
+                <h2 class="terms-section__title">Website Maintenance</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Maintenance is provided only if included in the selected service package or covered under a separate maintenance agreement. Contact us to learn about our maintenance plans.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 10 — Cancellation -->
+        <div class="terms-section" id="t-cancellation">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">❌</div>
+              <div>
+                <div class="terms-section__number">Section 10</div>
+                <h2 class="terms-section__title">Cancellation</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              If a project is cancelled after work has started, charges may apply based on the work completed up to the cancellation date. We will provide a transparent breakdown of work done.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 11 — Refund Policy -->
+        <div class="terms-section" id="t-refund">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">💰</div>
+              <div>
+                <div class="terms-section__number">Section 11</div>
+                <h2 class="terms-section__title">Refund Policy</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Advance payments are generally non-refundable once work has commenced. Any exception will be evaluated on a case-by-case basis.
+            </p>
+            <div class="terms-section__highlight">
+              📌 Each refund request is reviewed individually to ensure fair and transparent resolution.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 12 — Third-Party Costs -->
+        <div class="terms-section" id="t-thirdparty">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">🔗</div>
+              <div>
+                <div class="terms-section__number">Section 12</div>
+                <h2 class="terms-section__title">Third-Party Costs</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              Domain registration, hosting, premium themes, plugins, APIs, SSL certificates, email services, or other third-party purchases are billed separately unless specifically included in the quotation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 13 — Warranty -->
+        <div class="terms-section" id="t-warranty">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">🛡️</div>
+              <div>
+                <div class="terms-section__number">Section 13</div>
+                <h2 class="terms-section__title">Warranty</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              We provide reasonable support for bugs directly related to our work for the agreed support period. This does not cover changes requested later, third-party updates, or issues caused by client modifications.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 14 — Governing Law -->
+        <div class="terms-section" id="t-law">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">⚖️</div>
+              <div>
+                <div class="terms-section__number">Section 14</div>
+                <h2 class="terms-section__title">Governing Law</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              These Terms & Conditions shall be governed by the laws of India. Any disputes shall be subject to the jurisdiction of the competent courts where applicable.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 15 — Changes to Terms -->
+        <div class="terms-section" id="t-changes">
+          <div class="terms-section__card">
+            <div class="terms-section__header">
+              <div class="terms-section__icon">📝</div>
+              <div>
+                <div class="terms-section__number">Section 15</div>
+                <h2 class="terms-section__title">Changes to Terms</h2>
+              </div>
+            </div>
+            <p class="terms-section__text">
+              We reserve the right to modify these Terms & Conditions at any time. Continued use of our website or services indicates acceptance of the updated terms. We recommend reviewing these terms periodically.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA Section
+         ============================================ -->
+    <section class="terms-cta">
+      <div class="terms-cta__card">
+        <div class="terms-cta__icon">🚀</div>
+        <h2 class="terms-cta__title">Ready to Get Started?</h2>
+        <p class="terms-cta__text">
+          Have questions about our terms or want to discuss your project? Our team is here to help you every step of the way.
+        </p>
+        <a href="index.html#contact" class="terms-cta__btn">
+          Contact Us
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       Footer
+       ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <div class="navbar__logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                stroke-width="9" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;">
+                <path d="M30 25 L15 50 L30 75 M70 25 L85 50 L70 75 M45 75 L55 25" />
+              </svg>
+            </div>
+            <span>Shre Dev Studio</span>
+          </a>
+          <p>Transforming ideas into powerful digital solutions. We help businesses grow online with professional web
+            development, app development, SEO, and digital marketing services.</p>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Quick Links</h4>
+          <div class="footer__links">
+            <a href="index.html#home" class="footer__link">Home</a>
+            <a href="index.html#about" class="footer__link">About Us</a>
+            <a href="index.html#services" class="footer__link">Services</a>
+            <a href="index.html#portfolio" class="footer__link">Portfolio</a>
+            <a href="index.html#testimonials" class="footer__link">Testimonials</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Services</h4>
+          <div class="footer__links">
+            <a href="index.html#services" class="footer__link">Web Development</a>
+            <a href="index.html#services" class="footer__link">App Development</a>
+            <a href="index.html#services" class="footer__link">SEO Services</a>
+            <a href="index.html#services" class="footer__link">Graphic Design</a>
+            <a href="index.html#services" class="footer__link">Digital Marketing</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Support</h4>
+          <div class="footer__links">
+            <a href="index.html#faq" class="footer__link">FAQ</a>
+            <a href="index.html#contact" class="footer__link">Contact Us</a>
+            <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="footer__link">Terms of Service</a>
+            <a href="refund-and-cancellation.html" class="footer__link">Refund Policy</a>
+            <a href="disclaimer-cookie-policy.html" class="footer__link">Cookie Policy & Disclaimer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Shre Dev Studio. All Rights Reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="footer__bottom-link">Terms & Conditions</a>
+          <a href="refund-and-cancellation.html" class="footer__bottom-link">Refund Policy</a>
+          <a href="disclaimer-cookie-policy.html" class="footer__bottom-link">Cookie Policy & Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg class="back-to-top__progress" width="50" height="50" viewBox="0 0 50 50">
+      <circle class="back-to-top__progress-bg" cx="25" cy="25" r="22" fill="none" stroke="rgba(255, 255, 255, 0.1)"
+        stroke-width="3" />
+      <circle class="back-to-top__progress-bar" id="scroll-progress-circle" cx="25" cy="25" r="22" fill="none"
+        stroke="url(#progressGrad)" stroke-width="3" stroke-dasharray="138.23" stroke-dashoffset="138.23"
+        stroke-linecap="round" transform="rotate(-90 25 25)" />
+      <defs>
+        <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#8b5cf6" />
+          <stop offset="100%" stop-color="#06b6d4" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="back-to-top__icon">↑</span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.terms-toc__link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Intersection Observer for section animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.terms-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Refund & Cancellation Policy — Shre Dev Studio. Understand our terms for project cancellation, refunds, and service payments.">
+  <meta name="keywords" content="refund policy, cancellation policy, Shre Dev Studio">
+  <meta name="author" content="Shre Dev Studio">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://shredevstudio.vercel.app/refund-and-cancellation.html" />
+
+  <title>Refund & Cancellation Policy — Shre Dev Studio</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' text-anchor='middle' fill='white'>S</text></svg>">
+
+  <style>
+    /* ============================================
+       Refund & Cancellation Policy Page — Styles
+       ============================================ */
+
+    .refund-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      text-align: center;
+      overflow: hidden;
+      background: var(--gradient-hero);
+    }
+
+    .refund-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--gradient-glow);
+      pointer-events: none;
+    }
+
+    .refund-hero__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      margin-bottom: var(--space-8);
+      font-size: 2.5rem;
+      box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
+      animation: floatGently 3s ease-in-out infinite;
+    }
+
+    @keyframes floatGently {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .refund-hero__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-5xl);
+      font-weight: var(--fw-bold);
+      color: var(--text-heading);
+      margin-bottom: var(--space-4);
+      line-height: var(--lh-tight);
+    }
+
+    .refund-hero__title span {
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .refund-hero__subtitle {
+      font-family: var(--font-body);
+      font-size: var(--fs-md);
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: var(--lh-relaxed);
+    }
+
+    .refund-hero__date {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-6);
+      padding: var(--space-2) var(--space-5);
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: var(--fs-sm);
+      font-family: var(--font-body);
+      backdrop-filter: blur(10px);
+    }
+
+    .refund-hero__date svg {
+      width: 14px;
+      height: 14px;
+      color: var(--color-accent);
+    }
+
+    /* Content Area */
+    .refund-content {
+      padding: var(--space-20) var(--space-6);
+      background: var(--bg-primary);
+      position: relative;
+    }
+
+    .refund-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 200px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .refund-container {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Table of Contents */
+    .refund-toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      margin-bottom: var(--space-12);
+      backdrop-filter: blur(10px);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .refund-toc:hover {
+      border-color: rgba(6, 182, 212, 0.3);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+    }
+
+    .refund-toc__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-semibold);
+      color: var(--text-heading);
+      margin-bottom: var(--space-5);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .refund-toc__title svg {
+      color: var(--color-accent);
+    }
+
+    .refund-toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--space-2);
+    }
+
+    .refund-toc__item {
+      display: block;
+    }
+
+    .refund-toc__link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: var(--fs-sm);
+      font-family: var(--font-body);
+      transition: all 0.25s ease;
+    }
+
+    .refund-toc__link:hover {
+      background: rgba(6, 182, 212, 0.08);
+      color: var(--color-accent);
+      transform: translateX(4px);
+    }
+
+    .refund-toc__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      color: #fff;
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      flex-shrink: 0;
+    }
+
+    /* Refund Sections */
+    .refund-section {
+      margin-bottom: var(--space-12);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .refund-section:nth-child(1) { animation-delay: 0.08s; }
+    .refund-section:nth-child(2) { animation-delay: 0.14s; }
+    .refund-section:nth-child(3) { animation-delay: 0.2s; }
+    .refund-section:nth-child(4) { animation-delay: 0.26s; }
+    .refund-section:nth-child(5) { animation-delay: 0.32s; }
+    .refund-section:nth-child(6) { animation-delay: 0.38s; }
+    .refund-section:nth-child(7) { animation-delay: 0.44s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .refund-section__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-10);
+      backdrop-filter: blur(10px);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .refund-section__card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .refund-section__card:hover {
+      border-color: rgba(6, 182, 212, 0.3);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .refund-section__card:hover::before {
+      opacity: 1;
+    }
+
+    .refund-section__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+
+    .refund-section__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid var(--border-color);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      transition: all 0.35s ease;
+    }
+
+    .refund-section__card:hover .refund-section__icon {
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    }
+
+    .refund-section__number {
+      font-family: var(--font-heading);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .refund-section__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-bold);
+      color: var(--text-heading);
+      line-height: var(--lh-tight);
+    }
+
+    .refund-section__text {
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      color: var(--text-secondary);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-4);
+    }
+
+    .refund-section__text:last-child {
+      margin-bottom: 0;
+    }
+
+    .refund-section__text strong {
+      color: var(--color-accent);
+      font-weight: var(--fw-semibold);
+    }
+
+    .refund-section__list {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-4) 0 0 0;
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .refund-section__list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-sm);
+      background: rgba(6, 182, 212, 0.04);
+      border: 1px solid rgba(6, 182, 212, 0.06);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      line-height: var(--lh-normal);
+      transition: all 0.25s ease;
+    }
+
+    .refund-section__list-item:hover {
+      background: rgba(6, 182, 212, 0.08);
+      border-color: rgba(6, 182, 212, 0.15);
+      transform: translateX(4px);
+    }
+
+    .refund-section__list-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .refund-section__list-icon svg {
+      width: 10px;
+      height: 10px;
+      color: #fff;
+    }
+
+    /* Highlight box */
+    .refund-section__highlight {
+      padding: var(--space-4) var(--space-5);
+      border-radius: var(--radius-sm);
+      background: rgba(6, 182, 212, 0.06);
+      border-left: 3px solid var(--color-accent);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      line-height: var(--lh-relaxed);
+      margin-top: var(--space-4);
+    }
+
+    /* Warning highlight */
+    .refund-section__warning {
+      padding: var(--space-4) var(--space-5);
+      border-radius: var(--radius-sm);
+      background: rgba(245, 158, 11, 0.06);
+      border-left: 3px solid var(--color-warning);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      line-height: var(--lh-relaxed);
+      margin-top: var(--space-4);
+    }
+
+    /* Back Button */
+    .refund-back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-5);
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 100px;
+      left: var(--space-6);
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .refund-back:hover {
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+      transform: translateX(-2px);
+    }
+
+    .refund-back svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .refund-back:hover svg {
+      transform: translateX(-3px);
+    }
+
+    /* CTA at bottom */
+    .refund-cta {
+      text-align: center;
+      padding: var(--space-16) var(--space-6);
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .refund-cta__card {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: var(--space-12);
+      border-radius: var(--radius-xl);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .refund-cta__icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-4);
+    }
+
+    .refund-cta__title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      font-weight: var(--fw-bold);
+      color: var(--text-heading);
+      margin-bottom: var(--space-3);
+    }
+
+    .refund-cta__text {
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      color: var(--text-secondary);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-8);
+    }
+
+    .refund-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-4) var(--space-8);
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-base);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+    }
+
+    .refund-cta__btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .refund-hero {
+        padding: 130px 0 60px;
+      }
+
+      .refund-hero__title {
+        font-size: var(--fs-3xl);
+      }
+
+      .refund-hero__icon {
+        width: 64px;
+        height: 64px;
+        font-size: 2rem;
+      }
+
+      .refund-section__card {
+        padding: var(--space-6);
+      }
+
+      .refund-toc__list {
+        grid-template-columns: 1fr;
+      }
+
+      .refund-back {
+        position: static;
+        margin-bottom: var(--space-6);
+      }
+
+      .refund-content {
+        padding: var(--space-12) var(--space-4);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .refund-hero__title {
+        font-size: var(--fs-2xl);
+      }
+
+      .refund-section__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+       Navigation
+       ============================================ -->
+  <nav class="navbar navbar--transparent" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Shre Dev Studio Home">
+        <div class="navbar__logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+            stroke-width="9" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;">
+            <path d="M30 25 L15 50 L30 75 M70 25 L85 50 L70 75 M45 75 L55 25" />
+          </svg>
+        </div>
+        <span>Shre Dev Studio</span>
+      </a>
+
+      <div class="navbar__menu" id="navbar-menu" role="menubar">
+        <a href="index.html#home" class="navbar__link" role="menuitem">Home</a>
+        <a href="index.html#about" class="navbar__link" role="menuitem">About</a>
+        <a href="index.html#services" class="navbar__link" role="menuitem">Services</a>
+        <a href="index.html#portfolio" class="navbar__link" role="menuitem">Portfolio</a>
+        <a href="index.html#testimonials" class="navbar__link" role="menuitem">Testimonials</a>
+        <a href="index.html#contact" class="navbar__link" role="menuitem">Contact</a>
+      </div>
+
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="index.html#contact" class="btn btn--primary btn--nav-cta">Get Started <span class="btn-arrow">→</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <main>
+
+    <!-- ============================================
+         Refund & Cancellation — Hero Section
+         ============================================ -->
+    <section class="refund-hero">
+      <div class="container">
+        <div class="refund-hero__icon">💸</div>
+        <h1 class="refund-hero__title">
+          Refund & <span>Cancellation</span>
+        </h1>
+        <p class="refund-hero__subtitle">
+          This policy explains the terms related to project cancellation, refunds, and service payments at Shre Dev Studio.
+        </p>
+        <div class="refund-hero__date">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Last Updated: 13 July 2026
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         Refund & Cancellation — Content
+         ============================================ -->
+    <section class="refund-content">
+      <div class="refund-container">
+
+        <!-- Back to Home -->
+        <a href="index.html" class="refund-back" id="refund-back-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Home
+        </a>
+
+        <!-- Table of Contents -->
+        <div class="refund-toc">
+          <h2 class="refund-toc__title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            Table of Contents
+          </h2>
+          <ul class="refund-toc__list">
+            <li class="refund-toc__item"><a href="#r-advance" class="refund-toc__link"><span class="refund-toc__number">1</span>Advance Payment</a></li>
+            <li class="refund-toc__item"><a href="#r-refund" class="refund-toc__link"><span class="refund-toc__number">2</span>Refund Policy</a></li>
+            <li class="refund-toc__item"><a href="#r-cancellation" class="refund-toc__link"><span class="refund-toc__number">3</span>Project Cancellation</a></li>
+            <li class="refund-toc__item"><a href="#r-delay" class="refund-toc__link"><span class="refund-toc__number">4</span>Delay by Client</a></li>
+            <li class="refund-toc__item"><a href="#r-service-cancel" class="refund-toc__link"><span class="refund-toc__number">5</span>Service Cancellation</a></li>
+            <li class="refund-toc__item"><a href="#r-processing" class="refund-toc__link"><span class="refund-toc__number">6</span>Refund Processing</a></li>
+            <li class="refund-toc__item"><a href="#r-contact" class="refund-toc__link"><span class="refund-toc__number">7</span>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 1 — Advance Payment -->
+        <div class="refund-section" id="r-advance">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">💰</div>
+              <div>
+                <div class="refund-section__number">Section 01</div>
+                <h2 class="refund-section__title">Advance Payment</h2>
+              </div>
+            </div>
+            <ul class="refund-section__list">
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                All projects require an advance payment before work begins.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                The advance payment confirms the booking of your project and reserves development time.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 2 — Refund Policy -->
+        <div class="refund-section" id="r-refund">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">🔄</div>
+              <div>
+                <div class="refund-section__number">Section 02</div>
+                <h2 class="refund-section__title">Refund Policy</h2>
+              </div>
+            </div>
+            <ul class="refund-section__list">
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Advance payments are generally <strong>non-refundable</strong> once work on the project has started.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                If no work has been started and the cancellation request is approved, a partial refund may be considered after deducting any applicable administrative or transaction charges.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Payments made for domain registration, web hosting, SSL certificates, premium themes, plugins, APIs, software licenses, or other third-party services are <strong>non-refundable</strong>.
+              </li>
+            </ul>
+            <div class="refund-section__warning">
+              ⚠️ Please note: Third-party purchases (domains, hosting, plugins, etc.) are always non-refundable as these are processed by external providers.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 — Project Cancellation -->
+        <div class="refund-section" id="r-cancellation">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">❌</div>
+              <div>
+                <div class="refund-section__number">Section 03</div>
+                <h2 class="refund-section__title">Project Cancellation</h2>
+              </div>
+            </div>
+            <p class="refund-section__text">
+              A client may request cancellation at any time. If cancellation occurs after development has started:
+            </p>
+            <ul class="refund-section__list">
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Charges will apply based on the work completed.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Any remaining unpaid amount for completed work may still be payable.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Project files, source code, designs, or deliverables will be handed over only after all outstanding payments are cleared.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 4 — Delay by Client -->
+        <div class="refund-section" id="r-delay">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">⏳</div>
+              <div>
+                <div class="refund-section__number">Section 04</div>
+                <h2 class="refund-section__title">Delay by Client</h2>
+              </div>
+            </div>
+            <p class="refund-section__text">
+              If the client does not provide the required content, approvals, or feedback for an extended period, the project may be placed on hold. Extended delays may require a revised delivery schedule and additional charges.
+            </p>
+            <div class="refund-section__highlight">
+              💡 Tip: To keep your project on track, please provide content and feedback in a timely manner.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5 — Service Cancellation -->
+        <div class="refund-section" id="r-service-cancel">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">🚫</div>
+              <div>
+                <div class="refund-section__number">Section 05</div>
+                <h2 class="refund-section__title">Service Cancellation</h2>
+              </div>
+            </div>
+            <p class="refund-section__text">
+              Shre Dev Studio reserves the right to suspend or cancel services if:
+            </p>
+            <ul class="refund-section__list">
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                False or misleading information is provided.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                The service is requested for illegal, fraudulent, abusive, or prohibited activities.
+              </li>
+              <li class="refund-section__list-item">
+                <span class="refund-section__list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                Payment obligations are not fulfilled.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 6 — Refund Processing -->
+        <div class="refund-section" id="r-processing">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">⚙️</div>
+              <div>
+                <div class="refund-section__number">Section 06</div>
+                <h2 class="refund-section__title">Refund Processing</h2>
+              </div>
+            </div>
+            <p class="refund-section__text">
+              Where a refund is approved, it will normally be processed using the original payment method within a reasonable processing period, subject to payment provider timelines.
+            </p>
+            <div class="refund-section__highlight">
+              🕐 Refund processing times may vary depending on your bank or payment provider. Typically, refunds are processed within 7–14 business days.
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 7 — Contact -->
+        <div class="refund-section" id="r-contact">
+          <div class="refund-section__card">
+            <div class="refund-section__header">
+              <div class="refund-section__icon">📧</div>
+              <div>
+                <div class="refund-section__number">Section 07</div>
+                <h2 class="refund-section__title">Contact</h2>
+              </div>
+            </div>
+            <p class="refund-section__text">
+              For refund or cancellation requests, please contact us using the details provided on the Contact Us page. We are committed to resolving your concerns promptly and fairly.
+            </p>
+            <a href="index.html#contact" class="refund-cta__btn" style="margin-top: var(--space-6); display: inline-flex;">
+              Contact Us
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA Section
+         ============================================ -->
+    <section class="refund-cta">
+      <div class="refund-cta__card">
+        <div class="refund-cta__icon">🤝</div>
+        <h2 class="refund-cta__title">Need Help?</h2>
+        <p class="refund-cta__text">
+          If you have any questions about our refund or cancellation policy, our team is here to assist you. Don't hesitate to reach out.
+        </p>
+        <a href="index.html#contact" class="refund-cta__btn">
+          Get in Touch
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       Footer
+       ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo">
+            <div class="navbar__logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                stroke-width="9" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;">
+                <path d="M30 25 L15 50 L30 75 M70 25 L85 50 L70 75 M45 75 L55 25" />
+              </svg>
+            </div>
+            <span>Shre Dev Studio</span>
+          </a>
+          <p>Transforming ideas into powerful digital solutions. We help businesses grow online with professional web
+            development, app development, SEO, and digital marketing services.</p>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Quick Links</h4>
+          <div class="footer__links">
+            <a href="index.html#home" class="footer__link">Home</a>
+            <a href="index.html#about" class="footer__link">About Us</a>
+            <a href="index.html#services" class="footer__link">Services</a>
+            <a href="index.html#portfolio" class="footer__link">Portfolio</a>
+            <a href="index.html#testimonials" class="footer__link">Testimonials</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Services</h4>
+          <div class="footer__links">
+            <a href="index.html#services" class="footer__link">Web Development</a>
+            <a href="index.html#services" class="footer__link">App Development</a>
+            <a href="index.html#services" class="footer__link">SEO Services</a>
+            <a href="index.html#services" class="footer__link">Graphic Design</a>
+            <a href="index.html#services" class="footer__link">Digital Marketing</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Support</h4>
+          <div class="footer__links">
+            <a href="index.html#faq" class="footer__link">FAQ</a>
+            <a href="index.html#contact" class="footer__link">Contact Us</a>
+            <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="footer__link">Terms of Service</a>
+            <a href="refund-and-cancellation.html" class="footer__link">Refund Policy</a>
+            <a href="disclaimer-cookie-policy.html" class="footer__link">Cookie Policy & Disclaimer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Shre Dev Studio. All Rights Reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="footer__bottom-link">Terms & Conditions</a>
+          <a href="refund-and-cancellation.html" class="footer__bottom-link">Refund Policy</a>
+          <a href="disclaimer-cookie-policy.html" class="footer__bottom-link">Cookie Policy & Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg class="back-to-top__progress" width="50" height="50" viewBox="0 0 50 50">
+      <circle class="back-to-top__progress-bg" cx="25" cy="25" r="22" fill="none" stroke="rgba(255, 255, 255, 0.1)"
+        stroke-width="3" />
+      <circle class="back-to-top__progress-bar" id="scroll-progress-circle" cx="25" cy="25" r="22" fill="none"
+        stroke="url(#progressGrad)" stroke-width="3" stroke-dasharray="138.23" stroke-dashoffset="138.23"
+        stroke-linecap="round" transform="rotate(-90 25 25)" />
+      <defs>
+        <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#06b6d4" />
+          <stop offset="100%" stop-color="#10b981" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="back-to-top__icon">↑</span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.refund-toc__link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Intersection Observer for section animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.refund-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+
+</html>
