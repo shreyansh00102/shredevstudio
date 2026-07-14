@@ -435,6 +435,7 @@
   gap: var(--space-3);
   cursor: pointer;
   transition: all var(--transition-normal);
+  text-decoration: none;
 }
 
 .hero-cinematic__play-btn:hover {
