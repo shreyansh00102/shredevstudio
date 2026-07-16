@@ -1,13 +1,9 @@
-/* ============================================
-   SHRE DEV STUDIO — Design System
-   ============================================ */
+/* Design System Foundations */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
-/* ============================================
-   CSS Custom Properties (Design Tokens)
-   ============================================ */
+/* Variables & Tokens */
 :root {
   /* Colors — Dark Theme (default) */
   --bg-primary: #0a0a1a;
@@ -109,9 +105,7 @@
   --transition-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ============================================
-   Light Theme
-   ============================================ */
+/* Light Theme Variables */
 [data-theme="light"] {
   --bg-primary: #f8faff;
   --bg-secondary: #eef2ff;
@@ -138,9 +132,7 @@
   --shadow-glow-lg: 0 0 40px rgba(99,102,241,0.15);
 }
 
-/* ============================================
-   Reset & Base
-   ============================================ */
+/* CSS Reset & Defaults */
 *,
 *::before,
 *::after {
@@ -168,9 +160,7 @@ body {
   transition: background-color var(--transition-slow), color var(--transition-slow);
 }
 
-/* ============================================
-   Typography
-   ============================================ */
+/* Typography Styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--text-heading);
@@ -208,9 +198,7 @@ ul, ol {
   list-style: none;
 }
 
-/* ============================================
-   Utility Classes
-   ============================================ */
+/* Global Utilities */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -283,9 +271,7 @@ ul, ol {
   border-width: 0;
 }
 
-/* ============================================
-   Buttons
-   ============================================ */
+/* Buttons Components */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -372,9 +358,7 @@ ul, ol {
   gap: var(--space-4);
 }
 
-/* ============================================
-   Cards
-   ============================================ */
+/* Cards Layout & Glassmorphism styling */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -409,9 +393,7 @@ ul, ol {
   opacity: 1;
 }
 
-/* ============================================
-   Grid Layouts
-   ============================================ */
+/* Grid Systems */
 .grid {
   display: grid;
   gap: var(--space-8);
@@ -422,9 +404,7 @@ ul, ol {
 .grid--4 { grid-template-columns: repeat(4, 1fr); }
 .grid--5 { grid-template-columns: repeat(5, 1fr); }
 
-/* ============================================
-   Form Elements
-   ============================================ */
+/* Contact Form styling inputs */
 .form-group {
   margin-bottom: var(--space-5);
 }
@@ -487,9 +467,7 @@ ul, ol {
   display: block;
 }
 
-/* ============================================
-   Scrollbar
-   ============================================ */
+/* Custom Webkit scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -507,17 +485,13 @@ ul, ol {
   background: var(--color-secondary);
 }
 
-/* ============================================
-   Selection
-   ============================================ */
+/* Highlight text selections */
 ::selection {
   background: rgba(99, 102, 241, 0.3);
   color: var(--text-heading);
 }
 
-/* ============================================
-   Responsive Breakpoints
-   ============================================ */
+/* Media queries queries */
 @media (max-width: 1024px) {
   :root {
     --fs-5xl: 2.75rem;

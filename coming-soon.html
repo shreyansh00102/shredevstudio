@@ -13,9 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playball&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================================================================
-       1. Design System & Variables
-       ========================================================================== */
+    /* Design System foundations */
     :root {
       --color-bg-overlay: rgba(10, 15, 12, 0.75); /* Dark forest overlay */
       --color-text-primary: #ffffff;
@@ -44,9 +42,7 @@
       position: relative;
     }
 
-    /* ==========================================================================
-       2. Background Image & Dark Overlay
-       ========================================================================== */
+    /* Background layouts */
     .bg-container {
       position: absolute;
       top: 0;
@@ -77,9 +73,7 @@
       );
     }
 
-    /* ==========================================================================
-       3. Main Layout & Elements
-       ========================================================================== */
+    /* Center layout elements */
     .content-wrapper {
       position: relative;
       z-index: 10;
@@ -209,9 +203,7 @@
       height: 18px;
     }
 
-    /* ==========================================================================
-       4. Premium Video Modal Player
-       ========================================================================== */
+    /* Video modal overlay style */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -303,9 +295,7 @@
       border: 0;
     }
 
-    /* ==========================================================================
-       5. Animations
-       ========================================================================== */
+    /* Custom animations definition */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -409,10 +399,7 @@
   </div>
 
   <script>
-    // ==========================================================================
-    // CONFIGURATION: Set your video URL here
-    // Supports YouTube embeds, Vimeo embeds, or raw MP4 files.
-    // ==========================================================================
+    // Video configuration target url
     const VIDEO_CONFIG = {
       // Option A: Raw MP4 link (e.g. from Pexels, AWS, CDN)
       // Example: 'https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e339d3ec85cd839b22e11894d0c&profile_id=165&oauth2_token_id=57447761'
@@ -422,13 +409,13 @@
       videoUrl: 'https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e339d3ec85cd839b22e11894d0c&profile_id=165&oauth2_token_id=57447761'
     };
 
-    // DOM Elements
+    // Elements query selectors
     const openVideoBtn = document.getElementById('openVideoBtn');
     const closeVideoBtn = document.getElementById('closeVideoBtn');
     const videoModal = document.getElementById('videoModal');
     const videoContainer = document.getElementById('videoContainer');
 
-    // Helper: Detect video type and return appropriate HTML
+    // Detect video source provider and build iframe/video tag
     function createVideoElement(url) {
       if (!url) return '';
       
@@ -468,7 +455,7 @@
       `;
     }
 
-    // Modal Control Functions
+    // Modal behaviors
     function openModal() {
       // Inject video HTML to load it on click (saves bandwidth and ensures autoplay works)
       videoContainer.innerHTML = createVideoElement(VIDEO_CONFIG.videoUrl);
@@ -481,7 +468,7 @@
       }, 100);
     }
 
-    // Close Modal Function
+    // Close overlay state resets
     function closeModal() {
       videoModal.classList.remove('active');
       document.body.style.overflow = ''; // Restore scroll
@@ -495,7 +482,7 @@
       openVideoBtn.focus();
     }
 
-    // Event Listeners
+    // Bind interaction event listeners
     openVideoBtn.addEventListener('click', openModal);
     closeVideoBtn.addEventListener('click', closeModal);
 

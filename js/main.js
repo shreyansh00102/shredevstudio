@@ -1,6 +1,4 @@
-/* ============================================
-   SHRE DEV STUDIO — Main JavaScript
-   ============================================ */
+// Shre Dev Studio main operations
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -15,11 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initDropdowns();
   initCardGlow();
   initCostCalculator();
+  initMagneticButtons();
 });
 
-/* ============================================
-   Sticky Navbar
-   ============================================ */
+// Navbar scroll tracking and active link highlight
 function initNavbar() {
   const navbar = document.querySelector('.navbar');
   const navLinks = document.querySelectorAll('.navbar__link');
@@ -52,9 +49,7 @@ function initNavbar() {
   });
 }
 
-/* ============================================
-   Theme Toggle (Dark/Light)
-   ============================================ */
+// Theme switcher
 function initThemeToggle() {
   const toggle = document.getElementById('theme-toggle');
   const html = document.documentElement;
@@ -79,9 +74,7 @@ function updateThemeIcon(theme) {
   toggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
 }
 
-/* ============================================
-   Mobile Menu
-   ============================================ */
+// Mobile hamburger menu navigation
 function initMobileMenu() {
   const hamburger = document.querySelector('.hamburger');
   const menu = document.querySelector('.navbar__menu');
@@ -128,9 +121,7 @@ function initMobileMenu() {
   });
 }
 
-/* ============================================
-   Smooth Scroll
-   ============================================ */
+// Smooth scroll configuration
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -152,9 +143,7 @@ function initSmoothScroll() {
   });
 }
 
-/* ============================================
-   Portfolio Filter
-   ============================================ */
+// Portfolio category filters
 function initPortfolioFilter() {
   const filterBtns = document.querySelectorAll('.portfolio__filter-btn');
   const cards = document.querySelectorAll('.portfolio-card');
@@ -179,9 +168,7 @@ function initPortfolioFilter() {
   });
 }
 
-/* ============================================
-   Testimonials Carousel
-   ============================================ */
+// Testimonials slider carousel
 function initTestimonialsCarousel() {
   const track = document.querySelector('.testimonials__track');
   const cards = document.querySelectorAll('.testimonial-card');
@@ -262,9 +249,7 @@ function initTestimonialsCarousel() {
   startAutoPlay();
 }
 
-/* ============================================
-   FAQ Accordion
-   ============================================ */
+// FAQ accordion interactions
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
 
@@ -285,9 +270,7 @@ function initFaqAccordion() {
   });
 }
 
-/* ============================================
-   Back to Top Button (with Scroll Progress)
-   ============================================ */
+// Scroll indicator & Back to Top progress button
 function initBackToTop() {
   const btn = document.querySelector('.back-to-top');
   const circle = document.getElementById('scroll-progress-circle');
@@ -328,9 +311,7 @@ function initBackToTop() {
   });
 }
 
-/* ============================================
-   WhatsApp Tooltip Auto-Show Animation
-   ============================================ */
+// Auto-show WhatsApp button tooltip
 function initWhatsAppTooltip() {
   const whatsappBtn = document.querySelector('.whatsapp-float');
   if (!whatsappBtn) return;
@@ -346,9 +327,7 @@ function initWhatsAppTooltip() {
   }, 2500);
 }
 
-/* ============================================
-   Engineers Portfolio Dropdown
-   ============================================ */
+// Navigation action dropdown trigger
 function initDropdowns() {
   const dropdown = document.querySelector('.dropdown');
   const trigger = document.querySelector('.dropdown__trigger');
@@ -370,9 +349,7 @@ function initDropdowns() {
   });
 }
 
-/* ============================================
-   Card Mouse Glow Follow Effect
-   ============================================ */
+// Mouse movement spotlight lighting cards effect
 function initCardGlow() {
   const cards = document.querySelectorAll('.service-card, .portfolio-card');
   cards.forEach(card => {
@@ -386,9 +363,7 @@ function initCardGlow() {
   });
 }
 
-/* ============================================
-   Interactive Cost Calculator
-   ============================================ */
+// Dynamic budget projection estimator
 function initCostCalculator() {
   const calculator = document.getElementById('project-calculator');
   if (!calculator) return;
@@ -494,3 +469,35 @@ function initCostCalculator() {
   // Initial calculation
   updatePrice();
 }
+
+function initMagneticButtons() {
+  const magneticBtns = document.querySelectorAll('.btn--primary, .btn--secondary, .btn--accent, .hero-cinematic__play-btn');
+  magneticBtns.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      btn.style.transition = 'none';
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+      
+      const text = btn.querySelector('span');
+      if (text) {
+        text.style.transition = 'none';
+        text.style.transform = `translate(${x * 0.08}px, ${y * 0.08}px)`;
+      }
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+      btn.style.transform = '';
+      
+      const text = btn.querySelector('span');
+      if (text) {
+        text.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        text.style.transform = '';
+      }
+    });
+  });
+}
+

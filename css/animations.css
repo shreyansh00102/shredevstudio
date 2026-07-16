@@ -1,10 +1,6 @@
-/* ============================================
-   SHRE DEV STUDIO — Animations
-   ============================================ */
+/* Global Transitions & Animations */
 
-/* ============================================
-   Keyframe Animations
-   ============================================ */
+/* Keyframe Definitions */
 
 @keyframes fadeInUp {
   from {
@@ -194,9 +190,7 @@
   }
 }
 
-/* ============================================
-   Scroll-Triggered Animation Classes
-   ============================================ */
+/* Intersection Observer Anim Classes */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -247,9 +241,7 @@
 
 /* Hero animations are now defined in sections.css for the cinematic hero */
 
-/* ============================================
-   Floating particles for hero
-   ============================================ */
+/* Hero background floating bubbles shapes */
 .particle {
   position: absolute;
   border-radius: 50%;
@@ -302,9 +294,7 @@
   opacity: 0.1;
 }
 
-/* ============================================
-   Hover Micro-interactions
-   ============================================ */
+/* Premium hover micro-interactions */
 .hover-lift {
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
@@ -339,9 +329,7 @@
   transition: transform 0.6s ease;
 }
 
-/* ============================================
-   WhatsApp Floating Button Animation
-   ============================================ */
+/* WhatsApp float keyframes */
 .whatsapp-float {
   animation: pulse 2s ease-in-out infinite;
 }
@@ -355,9 +343,7 @@
   animation: ripple 2s ease-out infinite;
 }
 
-/* ============================================
-   Back to Top Button
-   ============================================ */
+/* Back to top state transition */
 .back-to-top {
   opacity: 0;
   visibility: hidden;
@@ -371,9 +357,7 @@
   transform: translateY(0);
 }
 
-/* ============================================
-   Loading Animation
-   ============================================ */
+/* Form submit loaders styles */
 .loader {
   display: flex;
   align-items: center;
@@ -392,9 +376,7 @@
 .loader__dot:nth-child(2) { animation-delay: 0.2s; }
 .loader__dot:nth-child(3) { animation-delay: 0.4s; }
 
-/* ============================================
-   Prefers Reduced Motion
-   ============================================ */
+/* Accessibility hardware resets */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

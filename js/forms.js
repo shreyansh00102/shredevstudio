@@ -1,14 +1,10 @@
-/* ============================================
-   SHRE DEV STUDIO — Form Validation & Handling
-   ============================================ */
+// Contact form client-side processing & validation
 
 document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
 });
 
-/* ============================================
-   Form Validation
-   ============================================ */
+// Input validation logic
 function initFormValidation() {
   const form = document.getElementById('contact-form');
   if (!form) return;
